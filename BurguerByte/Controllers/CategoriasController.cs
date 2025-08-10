@@ -51,7 +51,6 @@ namespace BurguerByte.Controllers
 
                 foreach (var erro in erros)
                 {
-                    // Aqui pode usar logging se quiser, só para debug
                     System.Diagnostics.Debug.WriteLine($"Erro de validação: {erro}");
                 }
 

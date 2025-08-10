@@ -25,7 +25,6 @@ namespace BurguerByte.Controllers
 
         public IActionResult Categorias()
         {
-            // Corrigido: Redireciona para a action Index do controller Categorias
             return RedirectToAction("Index", "Categorias");
         }
 

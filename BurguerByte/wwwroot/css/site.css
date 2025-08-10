@@ -1,22 +1,176 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    margin-bottom: 60px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff5ec;
+    color: #333;
+    background-image: linear-gradient(#e6dfd9 1px, transparent 1px), linear-gradient(90deg, #e6dfd9 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* NAVBAR FIXA COM GRID */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff5ec;
+    background-image: linear-gradient(#e6dfd9 1px, transparent 1px), linear-gradient(90deg, #e6dfd9 1px, transparent 1px);
+    background-size: 40px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+    header img {
+        height: 45px;
+    }
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+    nav a {
+        color: #333 !important;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: 600;
+        transition: 0.3s;
+        white-space: nowrap;
+    }
+
+        nav a:hover {
+            color: #ff9800 !important;
+        }
+
+.login-btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background-color: #ff9800;
+    color: white !important;
+    font-weight: bold;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 120px auto 50px;
+    padding: 0 50px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+    .text-content h1 {
+        font-size: 4rem;
+        font-family: 'Orbitron', sans-serif;
+        margin: 0;
+    }
+
+.binary {
+    font-size: 1rem;
+    font-family: monospace;
+    margin: 10px 0 20px;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.image-content {
+    flex: 1;
+    text-align: right;
+    position: relative;
+}
+
+    .image-content img {
+        max-width: 300px;
+    }
+
+/* Rodapé */
+footer .footer-container {
+    padding-left: 40px;
+}
+
+/* === Animações === */
+@keyframes burger-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes cpu-float-rotate {
+    0% {
+        transform: rotate(-10deg) translateY(0);
+    }
+
+    25% {
+        transform: rotate(0deg) translateY(-8px);
+    }
+
+    50% {
+        transform: rotate(10deg) translateY(0);
+    }
+
+    75% {
+        transform: rotate(0deg) translateY(-8px);
+    }
+
+    100% {
+        transform: rotate(-10deg) translateY(0);
+    }
+}
+
+.image-content img {
+    animation: burger-bounce 2s infinite ease-in-out;
+}
+
+/* Aplica animação no processador */
+.image-content .cpu {
+    position: absolute;
+    bottom: 20px;
+    right: -40px;
+    width: 150px;
+    transform: rotate(-10deg);
+    animation: cpu-float-rotate 4s infinite ease-in-out;
 }
