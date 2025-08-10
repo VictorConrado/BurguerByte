@@ -1,4 +1,12 @@
+
+using Microsoft.EntityFrameworkCore;
+using BurguerByte.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//Configuracion of DbContext
+builder.Services.AddDbContext<DbBuguerByteContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
