@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BurguerByte")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38cb93291f06038cb8ff067c696e729ab73bc382")]
 [assembly: System.Reflection.AssemblyProductAttribute("BurguerByte")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BurguerByte")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

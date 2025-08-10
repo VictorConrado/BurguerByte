@@ -23,6 +23,12 @@ namespace BurguerByte.Controllers
             return View();
         }
 
+        public IActionResult Categorias()
+        {
+            // Corrigido: Redireciona para a action Index do controller Categorias
+            return RedirectToAction("Index", "Categorias");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
